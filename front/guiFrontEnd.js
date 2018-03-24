@@ -9,6 +9,247 @@ var speedValue;
 var batteryValue;
 //________________________________________________________________________________________
 
+
+//________________TIRE PRESSURE___________________________________________________________
+
+// Variables
+var max = 40;
+var min = 30;
+var ending = 60;
+
+// Front-Left Tire Pressure Chart
+var tirePressureLF = AmCharts.makeChart("chartdiv1", {
+"theme": "light",
+"type": "gauge",
+"axes": [{
+  "topTextFontSize": 16,
+  "topTextYOffset": 70,
+  "axisColor": "#31d6ea",
+  "axisThickness": 1,
+  "endValue": ending,
+  "gridInside": true,
+  "inside": true,
+  "radius": "100%",
+  "valueInterval": 10,
+  "tickColor": "#67b7dc",
+  "startAngle": -75,
+  "endAngle": 75,
+  "unit": "",
+  "bandOutlineAlpha": 0,
+  "bands": [{
+    "color": "#0080ff",
+    "endValue": min,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": 0
+  }, {
+    "color": "#3cd3a3",
+    "endValue": max,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": min
+  }, {
+    "color": "#FF0000",
+    "endValue": ending,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": max
+  }]
+}],
+"arrows": [{
+  "alpha": 1,
+  "innerRadius": "35%",
+  "nailRadius": 0,
+  "radius": "100%"
+}]
+});
+
+// Front-Right Tire Pressure Chart
+var tirePressureRF = AmCharts.makeChart("chartdiv2", {
+"theme": "light",
+"type": "gauge",
+"axes": [{
+  "topTextFontSize": 16,
+  "topTextYOffset": 70,
+  "axisColor": "#31d6ea",
+  "axisThickness": 1,
+  "endValue": ending,
+  "gridInside": true,
+  "inside": true,
+  "radius": "100%",
+  "valueInterval": 10,
+  "tickColor": "#67b7dc",
+  "startAngle": -75,
+  "endAngle": 75,
+  "unit": "",
+  "bandOutlineAlpha": 0,
+  "bands": [{
+    "color": "#0080ff",
+    "endValue": min,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": 0
+  }, {
+    "color": "#3cd3a3",
+    "endValue": max,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": min
+  }, {
+    "color": "#FF0000",
+    "endValue": ending,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": max
+  }]
+}],
+"arrows": [{
+  "alpha": 1,
+  "innerRadius": "35%",
+  "nailRadius": 0,
+  "radius": "100%"
+}]
+});
+
+// Back-Left Tire Pressure Chart
+var tirePressureLB = AmCharts.makeChart("chartdiv3", {
+"theme": "light",
+"type": "gauge",
+"axes": [{
+  "topTextFontSize": 16,
+  "topTextYOffset": 70,
+  "axisColor": "#31d6ea",
+  "axisThickness": 1,
+  "endValue": ending,
+  "gridInside": true,
+  "inside": true,
+  "radius": "100%",
+  "valueInterval": 10,
+  "tickColor": "#67b7dc",
+  "startAngle": -75,
+  "endAngle": 75,
+  "unit": "",
+  "bandOutlineAlpha": 0,
+  "bands": [{
+    "color": "#0080ff",
+    "endValue": min,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": 0
+  }, {
+    "color": "#3cd3a3",
+    "endValue": max,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": min
+  }, {
+    "color": "#FF0000",
+    "endValue": ending,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": max
+  }]
+}],
+"arrows": [{
+  "alpha": 1,
+  "innerRadius": "35%",
+  "nailRadius": 0,
+  "radius": "100%"
+}]
+});
+
+// Back-Right Tire Pressure Chart
+var tirePressureRB = AmCharts.makeChart("chartdiv4", {
+"theme": "light",
+"type": "gauge",
+"axes": [{
+  "topTextFontSize": 16,
+  "topTextYOffset": 70,
+  "axisColor": "#31d6ea",
+  "axisThickness": 1,
+  "endValue": ending,
+  "gridInside": true,
+  "inside": true,
+  "radius": "100%",
+  "valueInterval": 10,
+  "tickColor": "#67b7dc",
+  "startAngle": -75,
+  "endAngle": 75,
+  "unit": "",
+  "bandOutlineAlpha": 0,
+  "bands": [{
+    "color": "#0080ff",
+    "endValue": min,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": 0
+  }, {
+    "color": "#3cd3a3",
+    "endValue": max,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": min
+  }, {
+    "color": "#FF0000",
+    "endValue": ending,
+    "innerRadius": "90%",
+    "radius": "100%",
+    "gradientRatio": [0.5, 0, -0.5],
+    "startValue": max
+  }]
+}],
+"arrows": [{
+  "alpha": 1,
+  "innerRadius": "35%",
+  "nailRadius": 0,
+  "radius": "100%"
+}]
+});
+
+setInterval(randomValue, 1000);
+
+
+
+// set random value
+function randomValue() {
+var value1 = Math.round(Math.random() * ending);
+tirePressureLF.arrows[0].setValue(value1);
+tirePressureLF.axes[0].setTopText(value1 + " psi");
+// adjust darker band to new value
+//chart.axes[0].bands[1].setEndValue(value);
+
+var value2 = Math.round(Math.random() * ending);
+tirePressureRF.arrows[0].setValue(value2);
+tirePressureRF.axes[0].setTopText(value2 + " psi");
+// adjust darker band to new value
+//chart.axes[0].bands[1].setEndValue(value);
+
+var value3 = Math.round(Math.random() * ending);
+tirePressureLB.arrows[0].setValue(value3);
+tirePressureLB.axes[0].setTopText(value3 + " psi");
+// adjust darker band to new value
+//chart.axes[0].bands[1].setEndValue(value);
+
+var value4 = Math.round(Math.random() * ending);
+tirePressureRB.arrows[0].setValue(value4);
+tirePressureRB.axes[0].setTopText(value4 + " psi");
+// adjust darker band to new value
+//chart.axes[0].bands[1].setEndValue(value);
+}
+
+//________________________________________________________________________________________
+
 //________________SPEED GRAPH_____________________________________________________________
 var g = new JustGage({
     id: "gauge",
@@ -31,6 +272,7 @@ var g = new JustGage({
 
 
 //_____________IMU FUNCTIONALITY_________________________________________________________
+/*
 var counter = 0, transDeg = 0, transRadius = 0, RUNTIME = 50;
 
 function imuMove(counter) {
@@ -48,15 +290,17 @@ function imuMove(counter) {
 setInterval(function() {
 	imuMove(counter++)
 }, RUNTIME/10);
+*/
 //________________________________________________________________________________________
 
 
 
 
 
-//______________WHEEL ANGE SIM____________________________________________________________
-document.getElementById("rotateButton").onmousedown = function(event) {
-    var deg = document.getElementById('rotateDeg').value;
+//______________WHEEL ANGLE SIM____________________________________________________________
+
+var rotateSteering = function(event) {
+    var deg = (Math.random() * 180) - 90;;
     document.getElementById("steering").style.WebkitTransform = "rotate(" + deg + "deg)";
 }
 //________________________________________________________________________________________
@@ -75,7 +319,7 @@ window.onload = function() {
     var dps5 = []; // data variable 5
 
     //Creating the multi part chart
-    var chart = new CanvasJS.Chart("chartContainer", {
+    var graph = new CanvasJS.Chart("chartContainer", {
         backgroundColor: '',
         zoomEnabled: true,
         axisY: {
@@ -138,7 +382,7 @@ window.onload = function() {
         } else {
             e.dataSeries.visible = true;
         }
-        chart.render();
+        graph.render();
     }
 
     var xVal = 0; //set an initial value in the x axis
@@ -149,7 +393,7 @@ window.onload = function() {
     var currentLength = -1;
 
         //function that updtaes the current y values
-    var updateChart = function(count) {
+    var updateGraphs = function(count) {
         count = count || 1;
         for (var j = 0; j < count; j++) {
             yVal3 = yVal3 + Math.round(5 + Math.random() * (-5 - 5));
@@ -188,12 +432,12 @@ window.onload = function() {
             dps4.shift();
             dps5.shift();
         }
-        chart.render();
+        graph.render();
     };
 
 
     //creating the chart for battery voltage
-    var chart2 = new CanvasJS.Chart("voltageChart", {
+    var voltageChart = new CanvasJS.Chart("voltageChart", {
         backgroundColor: '',
         animationEnabled: true,
         theme: "dark1",
@@ -286,17 +530,17 @@ window.onload = function() {
                 { y: 27, label: "72" }]
         }]
     });
-    chart2.render();
+    voltageChart.render();
 
         //creating random values for the voltages
-    var updateChart2 = function() {
+    var updateVoltageChart = function() {
         for (var i = 1; i <= 72; i++) {
-            chart2.options.data[0].dataPoints[i] = {
+            voltageChart.options.data[0].dataPoints[i] = {
                 y: Math.floor(Math.random() * 30 + 1)
             };
         }
 
-        chart2.render();
+        voltageChart.render();
     }
 
 
@@ -325,7 +569,7 @@ window.onload = function() {
     });
     batteryChart.render();
 
-    var updatebatteryChart = function() {
+    var updateBatteryChart = function() {
         batteryChart.options.data[0].dataPoints[0] = {
             y: batteryValue,
             label: "Battery Charge"
@@ -352,7 +596,7 @@ window.onload = function() {
         document.getElementById(section).innerHTML = "";
 
         for (var j = 0; j < lines; j++) {
-            for (var i = 0; i < 13; i++)
+            for (var i = 0; i < 20; i++)
                 text += possible.charAt(Math.floor(Math.random() * possible.length));
             text += "<br>";
         }
@@ -368,7 +612,7 @@ window.onload = function() {
 
         for (var j = 0; j < lines; j++) {
             text += "ERROR: "
-            for (var i = 0; i < 7; i++)
+            for (var i = 0; i < 15; i++)
                 text += possible.charAt(Math.floor(Math.random() * possible.length));
             text += "!<br>";
         }
@@ -384,21 +628,21 @@ window.onload = function() {
     var xValues = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U'];
     var yValues = ['O', 'N', 'M', 'L', 'K', 'J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'];
     var zValues = [
-      [0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.20, 0.75, 0.10,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.75, 0.75, 0.75, 0.75, 0.75,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75, 0.20,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.00, 0.00, 0.00, 0.75, 0.00,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 1.00, 0.75, 0.30,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.75, 0.75, 0.75, 0.75, 0.75,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75, 0.40,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.00, 0.00, 0.00, 0.75, 0.00,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75, 0.50,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.75, 0.75, 0.75, 0.75, 0.75,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75, 0.60,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.00, 0.00, 0.00, 0.75, 0.00,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.10, 0.75, 0.70,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75, 0.80,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.20, 0.75, 0.90,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.75, 0.75, 0.75, 0.75, 0.75,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75, 1.00,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.00, 0.00, 0.00, 0.75, 0.00,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 1.00, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.75, 0.75, 0.75, 0.75, 0.75,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.00, 0.00, 0.00, 0.75, 0.00,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75],
-      [0.00, 0.00, 0.00, 0.75, 0.00,0.00, 0.00, 0.75, 0.75, 0.00,0.00, 0.00, 0.75, 0.10, 0.75, 0.00,0.00, 0.00, 0.75, 0.00, 0.75]
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      [0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95],
+      [0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9],
+      [0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8],
+      [0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75],
+      [0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7],
+      [0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6],
+      [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+      [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+      [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3],
+      [0.25, 0.25, 0.25, 0.25, 0.25,0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25],
+      [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
+      [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+      [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05],
+      [0, 0, 0, 0, 0,0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0]
     ];
 
     function colorPerc(perc) {
@@ -463,13 +707,7 @@ window.onload = function() {
     for ( var i = 0; i < yValues.length; i++ )
     {
       for ( var j = 0; j < xValues.length; j++ ) {
-            var currentValue = zValues[i][j];
-            if (currentValue != 0.0) {
-            var textColor = 'white';
-            }
-            else{
-                var textColor = 'black';
-            }
+            var textColor = 'black';
 
             var result = {
                 xref: 'x1',
@@ -500,17 +738,18 @@ window.onload = function() {
 
 
     //_________UPDATING NUMBERS FOR EVERYTHING____________________________________________
-    updateChart(currentLength);
+    updateGraphs(currentLength);
 
     setInterval(function() {
         speedValue = getRandomInt(10, 100);
         batteryValue = getRandomInt(10, 100);
-        updateChart();
-        updateChart2();
-        updatebatteryChart();
-        randomRawData("raw", 15);
-        randomError("errors", 13);
+        updateGraphs();
+        updateVoltageChart();
+        updateBatteryChart();
+        randomRawData("raw", 28);
+        randomError("errors", 20);
         g.refresh(speedValue);
+        rotateSteering();
     }, updateInterval);
     //____________________________________________________________________________________
 

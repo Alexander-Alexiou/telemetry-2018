@@ -8,7 +8,12 @@
         <script src="JustGauge/raphael-2.1.4.min.js"></script>
         <script src="JustGauge/justgage.js"></script>
         <script src="Plot.ly/plotly-latest.min.js"></script>
-
+        <script src="tire/amcharts.js"></script>
+        <script src="tire/gauges.js"></script>
+        <script src="tire/export.min.js"></script>
+        <link rel="stylesheet" href="hexport.ccs" type="text/css" media="all" />
+        <script src="tire/light.js"></script>
+        
         <meta charset="utf-8" />
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -81,51 +86,19 @@
                             </div>
                         </div>
                         
-                        <div class="col-sm-5"><!--column 3 - 3 spots | -->
-                            <div class="row" style="border-left-style: none;border-bottom-style: none;"><!-- tires-->
-                                <h3>Tires</h3>
-                            </div>
-
-                            <div class="row" style="border-left-style: none;border-bottom-style: none;"><!--steering-->
-                                <h3>Steering</h3>
-                                <img width="90" height="90" style="float: right" id="steering" src="images/steeringWheel.png" /> Rotation angle:
-                                <input name="rotateDeg" type="number" maxlength="4" id="rotateDeg" class="rotateField">
-                                <br>
-                                <button type="button" id="rotateButton">Rotate</button>
-                            </div>
-
-                            <div class="row" style="border-left-style: none;border-bottom-style: none;"><!-- IMU-->
-                                <h3>IMU</h3>
-                                <img width="150" height="150" class="IMU" id="IMU" src="images/IMU.png" />
-                                <img width="30" height="30" class="IMU_BALL" id="Ball" src="images/Ball.png" /> 
-                            </div>
+                        <div class="col-sm-7" style="">
+                            <h3>Tires</h3>
+                            <div id="chartdiv1" style="width: 200px; height: 200px; display: inline-block;"></div>
+                            <div id="chartdiv2" style="width: 200px; height: 200px; display: inline-block; position: relative; left: 150px;"></div>
+                            <br/><img id="top_view" src="images/FE_car_top_view.png" style="height: 200px; width: 400px; display: block; position: relative; left: 60px"><br/>
+                            <div id="chartdiv3" style="width: 200px; height: 200px; display: inline-block;"></div>
+                            <div id="chartdiv4" style="width: 200px; height: 200px; display: inline-block; position: relative; left: 150px;"></div>
                         </div>
-
-                        <div class="col-sm-4"><!--column 4 - 3 spots | -->
-                            <div class="row" style="border-left-style: none;border-bottom-style: none;"> <!-- suspension-->
-                                <h3>Suspension</h3>
-                                <table border="2">
-                                    <th>Left Wheels</th>
-                                    <th>Right Wheels</th>
-                                    <tr>
-                                        <td id="FL">0</td>
-                                        <td id="FR">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td id="RL">0</td>
-                                        <td id="RR">0</td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <div class="row" style="border-left-style: none;border-bottom-style: none;"> <!--brakes-->
-                                <h3>Brakes</h3>
-                            </div>
-
-                            <div class="row"style="border-left-style: none;border-bottom-style: none;"> <!--trhottle-->
-                                <h3>Throttle</h3>
-                            </div>
-                        </div>	
+                        	
+                        <div class="col-sm-2" style="">
+                            <h3>Steering</h3>
+                                <img style="width: 100%; height: 100%; position: relative; left: -30px;" id="steering" src="images/steeringWheel.png" />
+                        </div>
                     </div>
                 </div>
                 
